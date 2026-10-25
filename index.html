@@ -2,536 +2,608 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional offshore oil and gas worker portfolio in the United States.">
-  <title>Oil & Gas Professional Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional offshore oil and gas worker portfolio in the United States.">
+<title>Oil & Gas Professional Portfolio</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #475569;
-      line-height: 1.7;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #475569;
+  line-height: 1.7;
+}
 
-    :root {
-      --navy: #17324d;
-      --gold: #b88632;
-      --light: #f8fafc;
-      --border: #e2e8f0;
-    }
+:root {
+  --navy: #17324d;
+  --gold: #b88632;
+  --light: #f8fafc;
+  --border: #e2e8f0;
+}
 
-    a {
-      color: inherit;
-    }
+a {
+  color: inherit;
+}
 
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
 
-    /* TOP: PHOTO AND PHONE ONLY */
-    .profile-header {
-      padding: 25px 0;
-      background: #ffffff;
-    }
+/* TOP PROFILE PHOTO AND EMAIL */
 
-    .profile-row {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
+.profile-header {
+  padding: 25px 0;
+  background: #ffffff;
+}
 
-    .profile-photo {
-      width: 145px;
-      height: 175px;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 12px;
-      background: var(--light);
-    }
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 
-    .phone {
-      font-size: 1.25rem;
-      font-weight: bold;
-      color: var(--navy);
-      text-decoration: none;
-      overflow-wrap: anywhere;
-    }
+.profile-photo {
+  width: 145px;
+  height: 175px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  background: var(--light);
+}
 
-    .phone-label {
-      color: #64748b;
-      font-size: 0.9rem;
-      margin-top: 5px;
-    }
+.email-top {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--navy);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
 
-    /* HERO IMAGE */
-    .hero-image {
-      width: 100%;
-      height: 380px;
-      object-fit: cover;
-      display: block;
-    }
+.email-top:hover {
+  color: var(--gold);
+}
 
-    .hero {
-      background: #ffffff;
-      padding: 55px 0 45px;
-    }
+.email-label {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
 
-    .eyebrow {
-      color: var(--gold);
-      font-size: 0.85rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
+/* HERO IMAGE */
 
-    h1, h2, h3 {
-      color: var(--navy);
-      line-height: 1.3;
-    }
+.hero-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      margin-bottom: 18px;
-    }
+.hero {
+  background: #ffffff;
+  padding: 55px 0 45px;
+}
 
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
+.eyebrow {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
 
-    h3 {
-      font-size: 1.15rem;
-      margin-bottom: 8px;
-    }
+h1, h2, h3 {
+  color: var(--navy);
+  line-height: 1.3;
+}
 
-    p {
-      margin-bottom: 14px;
-    }
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 18px;
+}
 
-    .hero p {
-      max-width: 760px;
-      font-size: 1.08rem;
-    }
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
 
-    /* SECTIONS */
-    section {
-      padding: 55px 0;
-      border-top: 1px solid var(--border);
-    }
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
 
-    .section-intro {
-      max-width: 780px;
-    }
+p {
+  margin-bottom: 14px;
+}
 
-    .experience-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 25px;
-    }
+.hero p {
+  max-width: 760px;
+  font-size: 1.08rem;
+}
 
-    .card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 15px rgba(23, 50, 77, 0.04);
-    }
+/* SECTIONS */
 
-    .card-icon {
-      width: 46px;
-      height: 46px;
-      display: grid;
-      place-items: center;
-      background: #f8f5ed;
-      border-radius: 10px;
-      color: var(--gold);
-      font-size: 1.5rem;
-      margin-bottom: 18px;
-    }
+section {
+  padding: 55px 0;
+  border-top: 1px solid var(--border);
+}
 
-    /* SKILLS */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      list-style: none;
-    }
+.section-intro {
+  max-width: 780px;
+}
 
-    .skills-grid li {
-      padding: 15px;
-      border: 1px solid var(--border);
-      background: var(--light);
-      border-radius: 8px;
-    }
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 25px;
+}
 
-    .skills-grid li::before {
-      content: "✓";
-      color: var(--gold);
-      font-weight: bold;
-      margin-right: 9px;
-    }
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(23,50,77,0.04);
+}
 
-    /* VALUES */
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
+.card-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background: #f8f5ed;
+  border-radius: 10px;
+  color: var(--gold);
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
 
-    .value {
-      text-align: center;
-      padding: 24px 12px;
-      background: var(--light);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      color: var(--navy);
-      font-weight: bold;
-    }
+/* SKILLS */
 
-    .value span {
-      display: block;
-      color: var(--gold);
-      font-size: 1.8rem;
-      margin-bottom: 8px;
-    }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  list-style: none;
+}
 
-    /* ADDITIONAL RIG PHOTO */
-    .work-photo {
-      display: block;
-      width: 100%;
-      max-height: 430px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin: 30px 0;
-    }
+.skills-grid li {
+  padding: 15px;
+  border: 1px solid var(--border);
+  background: var(--light);
+  border-radius: 8px;
+}
 
-    /* CONTACT: EMAIL ONLY */
-    .contact-box {
-      background: var(--light);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px;
-      max-width: 650px;
-    }
+.skills-grid li::before {
+  content: "✓";
+  color: var(--gold);
+  font-weight: bold;
+  margin-right: 9px;
+}
 
-    .email-link {
-      display: inline-block;
-      color: var(--navy);
-      font-weight: bold;
-      font-size: 1.1rem;
-      overflow-wrap: anywhere;
-      text-decoration: none;
-      border-bottom: 2px solid var(--gold);
-      padding-bottom: 4px;
-    }
+/* PROFESSIONAL VALUES */
 
-    .email-link:hover {
-      color: var(--gold);
-    }
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
 
-    footer {
-      text-align: center;
-      padding: 28px 15px;
-      background: var(--light);
-      border-top: 1px solid var(--border);
-      color: #64748b;
-      font-size: 0.9rem;
-    }
+.value {
+  text-align: center;
+  padding: 24px 12px;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--navy);
+  font-weight: bold;
+}
 
-    @media (max-width: 760px) {
-      .hero-image {
-        height: 240px;
-      }
+.value span {
+  display: block;
+  color: var(--gold);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
 
-      .experience-grid {
-        grid-template-columns: 1fr;
-      }
+/* CONTACT */
 
-      .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+.contact-box {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  max-width: 650px;
+}
 
-      .values-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+.email-link {
+  display: inline-block;
+  color: var(--navy);
+  font-weight: bold;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 4px;
+}
 
-      section {
-        padding: 40px 0;
-      }
-    }
+.email-link:hover {
+  color: var(--gold);
+}
 
-    @media (max-width: 420px) {
-      .profile-photo {
-        width: 105px;
-        height: 135px;
-      }
+/* FOOTER */
 
-      .profile-row {
-        gap: 15px;
-      }
+footer {
+  text-align: center;
+  padding: 28px 15px;
+  background: var(--light);
+  border-top: 1px solid var(--border);
+  color: #64748b;
+  font-size: 0.9rem;
+}
 
-      .phone {
-        font-size: 1rem;
-      }
+/* MOBILE RESPONSIVE */
 
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+@media (max-width: 760px) {
+  .hero-image {
+    height: 240px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .profile-photo {
+    width: 105px;
+    height: 135px;
+  }
+
+  .profile-row {
+    gap: 15px;
+  }
+
+  .email-top {
+    font-size: 0.9rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- TOP SECTION: PHOTO AND PHONE NUMBER ONLY -->
-  <header class="profile-header">
-    <div class="container profile-row">
+<!-- TOP PROFILE PHOTO AND EMAIL -->
 
-      <!-- Replace profile.jpg with the worker's actual photo -->
-      <img
-        class="profile-photo"
-        src="profile.jpg"
-        alt="Oil rig worker portrait"
-      >
+<header class="profile-header">
+  <div class="container profile-row">
 
-      <div>
-        <!-- Replace with the worker's real US phone number -->
-        <a class="phone" href="tel:+1XXXXXXXXXX">
-          +1 (XXX) XXX-XXXX
-        </a>
-        <p class="phone-label">United States</p>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- MAIN OIL RIG BANNER -->
-  <main>
     <img
-      class="hero-image"
-      src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1800&q=85"
-      alt="Industrial oil and gas facility"
+      class="profile-photo"
+      src="profile-engineer.png"
+      alt="Engineering professional portrait"
     >
 
-    <!-- INTRODUCTION -->
-    <div class="hero">
-      <div class="container">
-        <p class="eyebrow">OIL &amp; GAS INDUSTRY</p>
-        <h1>Professional Biography</h1>
+    <div>
+      <a
+        class="email-top"
+        href="mailto:theodorewinsloww@hotmail.com"
+      >
+        theodorewinsloww@hotmail.com
+      </a>
 
-        <p>
-          A dedicated oil and gas professional committed to offshore
-          operations, workplace safety, equipment handling, and teamwork.
-          Focused on maintaining high standards and contributing to
-          efficient operations in the United States.
-        </p>
-      </div>
+      <p class="email-label">
+        United States
+      </p>
     </div>
 
-    <!-- ABOUT ME -->
-    <section id="about">
-      <div class="container section-intro">
-        <h2>About Me</h2>
+  </div>
+</header>
 
-        <p>
-          I am a hardworking and safety-conscious professional who values
-          discipline, reliability, teamwork, and continuous development.
-          I understand the importance of following workplace procedures
-          and maintaining a safe working environment.
-        </p>
+<main>
 
-        <p>
-          My goal is to contribute to safe and efficient oil and gas
-          operations while continuing to develop my technical abilities
-          and professional experience.
-        </p>
-      </div>
-    </section>
+<!-- MAIN OIL AND GAS BANNER -->
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="container">
-        <h2>Professional Experience</h2>
+<img
+  class="hero-image"
+  src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1800&q=85"
+  alt="Industrial oil and gas facility"
+>
 
-        <p class="section-intro">
-          Professional experience and responsibilities can be customized
-          to reflect the worker's actual position and work history.
-        </p>
+<!-- INTRODUCTION -->
 
-        <div class="experience-grid">
+<div class="hero">
+  <div class="container">
 
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">⚙</div>
-            <h3>Offshore Operations</h3>
-            <p>
-              Supporting daily rig activities, following operational
-              procedures, and working with team members to meet
-              workplace objectives.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🔧</div>
-            <h3>Equipment Handling</h3>
-            <p>
-              Assisting with equipment handling, routine inspections,
-              maintenance tasks, and workplace organization according
-              to assigned duties.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🛡</div>
-            <h3>Health &amp; Safety</h3>
-            <p>
-              Following safety procedures, using appropriate personal
-              protective equipment, and reporting hazards in the
-              workplace.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="container">
-        <h2>Core Skills</h2>
-
-        <ul class="skills-grid">
-          <li>Offshore operations</li>
-          <li>HSE awareness</li>
-          <li>Equipment handling</li>
-          <li>Team collaboration</li>
-          <li>Problem-solving</li>
-          <li>Safety compliance</li>
-          <li>Communication</li>
-          <li>Time management</li>
-          <li>Operational discipline</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certifications">
-      <div class="container section-intro">
-        <h2>Certifications &amp; Training</h2>
-
-        <p>
-          This section is for the worker's actual qualifications,
-          offshore safety training, technical certificates, and
-          relevant medical clearances.
-        </p>
-
-        <p>
-          Add certificates such as BOSIET, HUET, first aid, or other
-          industry qualifications only if the worker holds them.
-        </p>
-      </div>
-    </section>
-
-    <!-- CAREER GOALS -->
-    <section id="career">
-      <div class="container section-intro">
-        <h2>Career Objectives</h2>
-
-        <p>
-          To continue growing within the oil and gas industry, strengthen
-          technical knowledge, and contribute to safe, efficient, and
-          responsible operations. Committed to continuous learning,
-          professional development, and working effectively with
-          experienced teams.
-        </p>
-
-        <!-- Replace work.jpg with a real offshore work photo -->
-        <img
-          class="work-photo"
-          src="work.jpg"
-          alt="Offshore oil rig work environment"
-          loading="lazy"
-        >
-      </div>
-    </section>
-
-    <!-- PROFESSIONAL VALUES -->
-    <section id="values">
-      <div class="container">
-        <h2>Professional Values</h2>
-
-        <div class="values-grid">
-          <div class="value">
-            <span aria-hidden="true">✓</span>
-            Safety First
-          </div>
-
-          <div class="value">
-            <span aria-hidden="true">♧</span>
-            Teamwork
-          </div>
-
-          <div class="value">
-            <span aria-hidden="true">◷</span>
-            Reliability
-          </div>
-
-          <div class="value">
-            <span aria-hidden="true">★</span>
-            Professionalism
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT: EMAIL ONLY -->
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-
-        <div class="contact-box">
-          <p>
-            For employment opportunities, professional inquiries,
-            or collaboration, please reach out by email.
-          </p>
-
-          <!-- Replace with the worker's real email address -->
-          <a
-            class="email-link"
-            href="mailto:your.email@example.com"
-          >
-            your.email@example.com
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>
-      &copy; <span id="year"></span>
-      Oil &amp; Gas Professional Portfolio
+    <p class="eyebrow">
+      OIL &amp; GAS INDUSTRY
     </p>
-  </footer>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+    <h1>Professional Biography</h1>
+
+    <p>
+      A dedicated oil and gas professional
+      committed to offshore operations,
+      workplace safety, equipment handling,
+      and teamwork.
+    </p>
+
+    <p>
+      Focused on maintaining high standards
+      and contributing to efficient operations
+      in the United States.
+    </p>
+
+  </div>
+</div>
+
+<!-- ABOUT ME -->
+
+<section id="about">
+  <div class="container section-intro">
+
+    <h2>About Me</h2>
+
+    <p>
+      I am a hardworking and safety-conscious
+      professional who values discipline,
+      reliability, teamwork, and continuous
+      development.
+    </p>
+
+    <p>
+      I understand the importance of following
+      workplace procedures and maintaining
+      a safe working environment.
+    </p>
+
+    <p>
+      My goal is to contribute to safe and
+      efficient oil and gas operations while
+      continuing to develop my technical
+      abilities and professional experience.
+    </p>
+
+  </div>
+</section>
+
+<!-- PROFESSIONAL EXPERIENCE -->
+
+<section id="experience">
+  <div class="container">
+
+    <h2>Professional Experience</h2>
+
+    <p class="section-intro">
+      Professional experience and responsibilities
+      can be customized to reflect actual
+      positions and work history.
+    </p>
+
+    <div class="experience-grid">
+
+      <article class="card">
+
+        <div class="card-icon">⚙</div>
+
+        <h3>Offshore Operations</h3>
+
+        <p>
+          Supporting daily rig activities,
+          following operational procedures,
+          and working with team members to
+          meet workplace objectives.
+        </p>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-icon">🔧</div>
+
+        <h3>Equipment Handling</h3>
+
+        <p>
+          Assisting with equipment handling,
+          routine inspections, maintenance
+          tasks, and workplace organization
+          according to assigned duties.
+        </p>
+
+      </article>
+
+      <article class="card">
+
+        <div class="card-icon">🛡</div>
+
+        <h3>Health &amp; Safety</h3>
+
+        <p>
+          Following safety procedures,
+          using appropriate personal
+          protective equipment, and
+          reporting hazards in the workplace.
+        </p>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CORE SKILLS -->
+
+<section id="skills">
+  <div class="container">
+
+    <h2>Core Skills</h2>
+
+    <ul class="skills-grid">
+      <li>Offshore operations</li>
+      <li>HSE awareness</li>
+      <li>Equipment handling</li>
+      <li>Team collaboration</li>
+      <li>Problem-solving</li>
+      <li>Safety compliance</li>
+      <li>Communication</li>
+      <li>Time management</li>
+      <li>Operational discipline</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+  <div class="container section-intro">
+
+    <h2>Certifications &amp; Training</h2>
+
+    <p>
+      This section is for actual qualifications,
+      offshore safety training, technical
+      certificates, and relevant medical
+      clearances.
+    </p>
+
+    <p>
+      Add certificates such as BOSIET,
+      HUET, first aid, or other industry
+      qualifications only if held.
+    </p>
+
+  </div>
+</section>
+
+<!-- CAREER OBJECTIVES -->
+
+<section id="career">
+  <div class="container section-intro">
+
+    <h2>Career Objectives</h2>
+
+    <p>
+      To continue growing within the oil
+      and gas industry, strengthen technical
+      knowledge, and contribute to safe,
+      efficient, and responsible operations.
+    </p>
+
+    <p>
+      Committed to continuous learning,
+      professional development, and working
+      effectively with experienced teams.
+    </p>
+
+  </div>
+</section>
+
+<!-- PROFESSIONAL VALUES -->
+
+<section id="values">
+  <div class="container">
+
+    <h2>Professional Values</h2>
+
+    <div class="values-grid">
+
+      <div class="value">
+        <span>✓</span>
+        Safety First
+      </div>
+
+      <div class="value">
+        <span>♧</span>
+        Teamwork
+      </div>
+
+      <div class="value">
+        <span>◷</span>
+        Reliability
+      </div>
+
+      <div class="value">
+        <span>★</span>
+        Professionalism
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT EMAIL -->
+
+<section id="contact">
+  <div class="container">
+
+    <h2>Contact</h2>
+
+    <div class="contact-box">
+
+      <p>
+        For employment opportunities,
+        professional inquiries, or
+        collaboration, please reach
+        out by email.
+      </p>
+
+      <a
+        class="email-link"
+        href="mailto:theodorewinsloww@hotmail.com"
+      >
+        theodorewinsloww@hotmail.com
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    &copy; <span id="year"></span>
+    Oil &amp; Gas Professional Portfolio
+  </p>
+
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
 
 </body>
 </html>
