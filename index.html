@@ -5,9 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Professional offshore oil and gas portfolio.">
+<meta name="theme-color" content="#17324d">
 <title>Oil & Gas Professional Portfolio</title>
 
 <style>
+:root {
+  --navy: #17324d;
+  --gold: #b88632;
+  --light: #f8fafc;
+  --border: #e2e8f0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,16 +28,9 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
+  background: white;
   color: #475569;
   line-height: 1.7;
-}
-
-:root {
-  --navy: #17324d;
-  --gold: #b88632;
-  --light: #f8fafc;
-  --border: #e2e8f0;
 }
 
 a {
@@ -41,7 +42,7 @@ a {
   margin: auto;
 }
 
-/* PROFILE PHOTO AND EMAIL */
+/* PROFILE HEADER */
 
 .profile-header {
   padding: 25px 0;
@@ -51,7 +52,7 @@ a {
 .profile-row {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .profile-photo {
@@ -62,10 +63,17 @@ a {
   border-radius: 12px;
   background: var(--light);
   border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.profile-contact {
+  min-width: 0;
+  flex: 1;
 }
 
 .email-top {
-  font-size: 1.1rem;
+  display: block;
+  font-size: 0.95rem;
   font-weight: bold;
   color: var(--navy);
   text-decoration: none;
@@ -77,12 +85,12 @@ a {
 }
 
 .email-label {
-  color: #64748b;
   font-size: 0.9rem;
+  color: #64748b;
   margin-top: 5px;
 }
 
-/* MAIN BANNER */
+/* HERO BANNER */
 
 .hero-image {
   width: 100%;
@@ -92,8 +100,8 @@ a {
 }
 
 .hero {
-  background: white;
   padding: 55px 0 45px;
+  background: white;
 }
 
 .eyebrow {
@@ -133,7 +141,7 @@ p {
   font-size: 1.08rem;
 }
 
-/* SECTIONS */
+/* CONTENT SECTIONS */
 
 section {
   padding: 55px 0;
@@ -143,6 +151,8 @@ section {
 .section-intro {
   max-width: 780px;
 }
+
+/* EXPERIENCE */
 
 .experience-grid {
   display: grid;
@@ -244,11 +254,58 @@ section {
   color: var(--gold);
 }
 
+.contact-button {
+  display: inline-block;
+  margin-top: 15px;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.contact-button:hover {
+  background: #244d70;
+}
+
+/* FLOATING EMAIL BUTTON */
+
+.floating-chat {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--navy);
+  color: white;
+  padding: 14px 19px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.floating-chat:hover {
+  background: #244d70;
+  transform: translateY(-3px);
+}
+
+.chat-icon {
+  font-size: 21px;
+  line-height: 1;
+}
+
 /* FOOTER */
 
 footer {
   text-align: center;
-  padding: 28px 15px;
+  padding: 28px 15px 100px;
   background: var(--light);
   border-top: 1px solid var(--border);
   color: #64748b;
@@ -286,15 +343,22 @@ footer {
   }
 
   .profile-row {
-    gap: 15px;
+    gap: 12px;
   }
 
   .email-top {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .floating-chat {
+    bottom: 20px;
+    right: 15px;
+    padding: 12px 16px;
+    font-size: 13px;
   }
 }
 </style>
@@ -310,10 +374,11 @@ footer {
     <img
       class="profile-photo"
       src="./profile-engineer.PNG"
-      alt="Engineering Professional Portrait"
+      alt="Engineering professional portrait"
     >
 
-    <div>
+    <div class="profile-contact">
+
       <a
         class="email-top"
         href="mailto:theodorewinsloww@hotmail.com"
@@ -324,6 +389,7 @@ footer {
       <p class="email-label">
         United States
       </p>
+
     </div>
 
   </div>
@@ -339,7 +405,7 @@ footer {
   alt="Industrial oil and gas facility"
 >
 
-<!-- INTRODUCTION -->
+<!-- PROFESSIONAL BIOGRAPHY -->
 
 <div class="hero">
   <div class="container">
@@ -396,7 +462,7 @@ footer {
   </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- PROFESSIONAL EXPERIENCE -->
 
 <section id="experience">
   <div class="container">
@@ -404,27 +470,31 @@ footer {
     <h2>Professional Experience</h2>
 
     <p class="section-intro">
-      Professional experience and responsibilities
-      can be customized to reflect actual
-      positions and work history.
+      Focused on supporting safe, reliable,
+      and efficient offshore oil and gas
+      operations through teamwork,
+      operational awareness, and
+      professional responsibility.
     </p>
 
     <div class="experience-grid">
 
       <article class="card">
         <div class="card-icon">⚙</div>
+
         <h3>Offshore Operations</h3>
 
         <p>
           Supporting daily rig activities,
           following operational procedures,
-          and working with team members to
-          meet workplace objectives.
+          and working with team members
+          to meet workplace objectives.
         </p>
       </article>
 
       <article class="card">
         <div class="card-icon">🔧</div>
+
         <h3>Equipment Handling</h3>
 
         <p>
@@ -437,6 +507,7 @@ footer {
 
       <article class="card">
         <div class="card-icon">🛡</div>
+
         <h3>Health &amp; Safety</h3>
 
         <p>
@@ -451,7 +522,7 @@ footer {
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- CORE SKILLS -->
 
 <section id="skills">
   <div class="container">
@@ -469,29 +540,6 @@ footer {
       <li>Time management</li>
       <li>Operational discipline</li>
     </ul>
-
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-
-<section id="certifications">
-  <div class="container section-intro">
-
-    <h2>Certifications &amp; Training</h2>
-
-    <p>
-      This section is for actual qualifications,
-      offshore safety training, technical
-      certificates, and relevant medical
-      clearances.
-    </p>
-
-    <p>
-      Add certificates such as BOSIET,
-      HUET, first aid, or other industry
-      qualifications only if held.
-    </p>
 
   </div>
 </section>
@@ -552,7 +600,7 @@ footer {
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT SECTION -->
 
 <section id="contact">
   <div class="container">
@@ -575,11 +623,31 @@ footer {
         theodorewinsloww@hotmail.com
       </a>
 
+      <br>
+
+      <a
+        class="contact-button"
+        href="mailto:theodorewinsloww@hotmail.com?subject=Professional%20Inquiry"
+      >
+        ✉ Send an Email
+      </a>
+
     </div>
   </div>
 </section>
 
 </main>
+
+<!-- FLOATING EMAIL CHAT BUTTON -->
+
+<a
+  class="floating-chat"
+  href="mailto:theodorewinsloww@hotmail.com?subject=Website%20Inquiry"
+  aria-label="Contact via email"
+>
+  <span class="chat-icon">✉</span>
+  <span>Chat via Email</span>
+</a>
 
 <!-- FOOTER -->
 
